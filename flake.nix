@@ -1,7 +1,7 @@
 {
   description = "Collection of personal nix templates";
 
-  outputs = { self, ... }; {
+  outputs = { self, ... }: {
     templates = {
       trivial = {
         path = ./templates/trivial;
