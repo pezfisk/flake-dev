@@ -23,7 +23,7 @@
 	description = "Basic python template";
       };
 
-      defaultTemplate = self.templates.
+      defaultTemplate = self.templates.trivial;
     };
   };
 }
