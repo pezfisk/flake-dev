@@ -20,7 +20,7 @@
             (python.withPackages (ps: with ps; [
               # Python packages for development tools
               uv
-              ruff
+              python-lsp-server
               black
               pyinstaller
             ]))
