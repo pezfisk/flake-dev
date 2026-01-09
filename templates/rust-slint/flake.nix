@@ -15,12 +15,25 @@
         defaultPackage = naersk-lib.buildPackage ./.;
         devShell = with pkgs; mkShell {
           buildInputs = [
-	  	cargo rustc rustfmt pre-commit rustPackages.clippy gcc 
-		libx11 libGL qt6.qtbase pkg-config
-	  ];
+            cargo
+            rustc
+            rustfmt
+            pre-commit
+            rustPackages.clippy
+            gcc
+            libx11
+            libGL
+            qt6.qtbase
+            pkg-config
+            rust-analyzer
+            lldb_20
+            slint-lsp
+            flatpak-builder
+            appstream
+          ];
           RUST_SRC_PATH = rustPlatform.rustLibSrc;
 
-	  LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${ with pkgs; lib.makeLibraryPath [
+          LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:${ with pkgs; lib.makeLibraryPath [
                 wayland
                 libxkbcommon
                 fontconfig
